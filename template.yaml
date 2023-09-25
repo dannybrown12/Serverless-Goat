@@ -3,7 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 
 Globals:
   Function:
-    Runtime: nodejs8.10
+    Runtime: nodejs14.x
     Handler: index.handler
     MemorySize: 3008
     Timeout: 10
@@ -48,6 +48,9 @@ Resources:
       Type: AWS::S3::Bucket
       Properties:
         AccessControl: PublicRead
+        OwnershipControls:
+          Rules:
+            - ObjectOwnership: BucketOwnerEnforced
         WebsiteConfiguration:
           IndexDocument: index.html
           ErrorDocument: index.html

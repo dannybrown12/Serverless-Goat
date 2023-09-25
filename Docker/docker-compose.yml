@@ -1,0 +1,30 @@
+version: '3.3'
+services:
+    run:
+        hostname: 0e3d6ff5f908
+        environment:
+            - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+            - container=oci
+        labels:
+            - architecture=x86_64
+            - 'build-date=2022-07-26T12:34:08.928083'
+            - com.redhat.build-host=cpt-1008.osbs.prod.upshift.rdu2.redhat.com
+            - com.redhat.component=ubi8-container
+            - 'com.redhat.license_terms=https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI'
+            - 'description=The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.'
+            - distribution-scope=public
+            - io.buildah.version=1.24.1
+            - 'io.k8s.description=Container with networking tools for tests'
+            - 'io.k8s.display-name=Network Tools'
+            - io.openshift.expose-services=
+            - io.openshift.tags=nettools
+            - 'maintainer=Red Hat, Inc.'
+            - name=ubi8
+            - release=903
+            - 'summary=Provides the latest release of Red Hat Universal Base Image 8.'
+            - 'url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8/images/8.6-903'
+            - vcs-ref=f1ee6e37554363ec55e0035aba1a693d3627fdeb
+            - vcs-type=git
+            - 'vendor=Red Hat, Inc.'
+            - version=8.6
+        image: run
